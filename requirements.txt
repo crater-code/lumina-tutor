@@ -1,0 +1,25 @@
+# Core dependencies
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.5
+python-multipart==0.0.20
+python-dotenv>=1.0.0
+
+# LLM
+openai==1.58.1
+google-generativeai>=0.8.0
+
+# PDF processing
+PyPDF2==3.0.1
+pdfplumber==0.11.4
+
+# ML/Embeddings
+sentence-transformers==3.3.1
+torch>=2.6.0
+faiss-cpu==1.9.0.post1
+numpy==2.2.1
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.25.2
+pytest-cov==6.0.0

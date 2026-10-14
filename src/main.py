@@ -26,7 +26,7 @@ from src.bounded_chatbot import BoundedChatbotEngine
 from src.strict_validator import StrictGroundingValidator
 from src.query_classifier import QueryClassifier, QueryType
 
-app = FastAPI(title="Book-Bounded Tutoring Chatbot")
+app = FastAPI(title="Lumina - Bounded Educational AI Tutor")
 
 app.add_middleware(
     CORSMiddleware,

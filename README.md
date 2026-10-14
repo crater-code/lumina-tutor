@@ -1,4 +1,4 @@
-# 📚 BookBounded — Bounded Educational Tutoring Chatbot System
+# 🌟 Lumina — Bounded Educational AI Tutor
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -8,7 +8,7 @@
 [![Embeddings](https://img.shields.io/badge/Embeddings-Sentence--Transformers-FFD21E)](https://sbert.net/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-An enterprise-grade, pedagogically bounded AI tutoring chatbot platform engineered for children and students aged **4 to 15**. BookBounded ingests full-length educational books (PDF format), performs structural and semantic chunking, and guarantees **100% grounded, hallucination-free responses** strictly derived from the book's verifiable text with explicit chunk and page citations.
+An enterprise-grade, pedagogically bounded AI tutoring platform engineered for children and students aged **4 to 15**. **Lumina** ingests full-length educational books (PDF format), performs structural and semantic chunking, and guarantees **100% grounded, hallucination-free responses** strictly derived from the book's verifiable text with explicit chunk and page citations.
 
 ---
 
@@ -35,8 +35,8 @@ An enterprise-grade, pedagogically bounded AI tutoring chatbot platform engineer
 ### The Problem
 Traditional generative LLMs frequently hallucinate facts, invent external metaphors, and produce answers beyond a textbook's curriculum. In early education (ages 4–15), ungrounded responses cause confusion, undermine classroom authority, and risk exposing students to unvetted external information.
 
-### The BookBounded Solution
-BookBounded introduces a **Strict Boundary Verification Framework**:
+### The Lumina Solution
+Lumina introduces a **Strict Boundary Verification Framework**:
 - 🛑 **Strict Domain Boundedness**: Out-of-bounds questions (e.g., asking about pop culture or unrelated topics) are politely rejected with explicit guidance back to the uploaded textbook.
 - 📖 **100% Textual Grounding**: Every answer is verified against exact paragraphs extracted from the source PDF.
 - 🎯 **Verifiable Citations**: Every response references the exact chunk IDs and page numbers where the concept originates.
@@ -47,9 +47,9 @@ BookBounded introduces a **Strict Boundary Verification Framework**:
 
 ## 📸 UI Showcase & Interface Preview
 
-![BookBounded Tutoring Chatbot UI](screenshot/main.png)
+![Lumina AI Tutor UI](screenshot/main.png)
 
-> **CraterCode Cyber-Minimalist Workspace**: High-performance educational tutoring dashboard featuring live book telemetry (*Building the Intentional University* — 457 pages & 1,841 indexed chunks), drag-and-drop PDF ingestion, 3-tier age adaptation (Explorer 4–7, Scholar 8–11, Master 12–15), bilingual English/Urdu support, and a real-time Grounding Inspector guaranteeing 0.0% hallucination risk with verifiable chunk and page citations.
+> **Lumina Cyber-Minimalist Workspace (CraterCode Theme)**: High-performance educational tutoring dashboard featuring live book telemetry (*Building the Intentional University* — 457 pages & 1,841 indexed chunks), drag-and-drop PDF ingestion, 3-tier age adaptation (Explorer 4–7, Scholar 8–11, Master 12–15), bilingual English/Urdu support, and a real-time Grounding Inspector guaranteeing 0.0% hallucination risk with verifiable chunk and page citations.
 
 ---
 
@@ -122,7 +122,7 @@ BookBounded introduces a **Strict Boundary Verification Framework**:
 ## 📁 Project Directory Layout
 
 ```text
-BookBounded_Tutoring_Chatbot/
+lumina-tutor/
 ├── data/                               # Local data storage
 │   ├── uploads/                        # Uploaded textbook PDFs
 │   └── vector_store/                   # Serialized FAISS indices & chunk mapping

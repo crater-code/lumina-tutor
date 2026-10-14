@@ -212,7 +212,7 @@ function App() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `BookBounded_Chat_${new Date().toISOString().slice(0, 10)}.txt`
+    a.download = `Lumina_Chat_${new Date().toISOString().slice(0, 10)}.txt`
     a.click()
   }
 
@@ -228,7 +228,7 @@ function App() {
           <div className="brand-divider"></div>
           <div className="brand-tag">
             <div className="pulse-dot"></div>
-            <span>BOOKBOUNDED AI TUTOR</span>
+            <span>LUMINA AI TUTOR</span>
           </div>
         </div>
 
@@ -274,9 +274,9 @@ function App() {
           <h2>
             <span>DEVELOP WITH IMPACT</span>
             <span style={{ color: 'var(--color-primary)' }}>//</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--color-primary)' }}>BOUNDED TUTOR</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--color-primary)' }}>LUMINA AI</span>
           </h2>
-          <p>Strictly bounded educational AI grounded in verified textbook literature for ages 4–15.</p>
+          <p>Lumina: strictly bounded educational AI grounded in verified textbook literature for ages 4–15.</p>
         </div>
 
         <div className="tier-controls">
@@ -401,9 +401,9 @@ function App() {
             {messages.length === 0 ? (
               <div className="welcome-container">
                 <div className="welcome-icon">🪐</div>
-                <h3 className="welcome-title">BOOK-BOUNDED TUTORING</h3>
+                <h3 className="welcome-title">LUMINA AI TUTOR</h3>
                 <p className="welcome-desc">
-                  This educational system strictly answers using the ingested book. Questions outside the curriculum are politely refused with zero hallucination.
+                  Lumina strictly answers questions using the ingested book. Inquiries outside the curriculum are politely refused with zero hallucination.
                 </p>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <button 

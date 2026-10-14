@@ -1,7 +1,14 @@
 """Simplified FastAPI application for Book-Bounded Tutoring Chatbot."""
 
 import os
+import sys
 import shutil
+
+# Ensure utf-8 output encoding on Windows consoles
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel

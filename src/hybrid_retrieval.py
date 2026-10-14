@@ -39,9 +39,9 @@ class HybridRetrievalSystem:
             if overlap >= 1 or score > 0.5:
                 filtered.append((chunk, score))
         
-        # If still no results, return top semantic matches
+        # If no results match keywords or sufficient similarity, return empty (triggers refusal)
         if not filtered:
-            filtered = all_results[:top_k]
+            return []
         
         # Return top-k by semantic score
         filtered.sort(key=lambda x: x[1], reverse=True)

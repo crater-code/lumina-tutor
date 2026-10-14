@@ -215,12 +215,21 @@ STYLE GUIDELINES:
 
 Generate your response now:"""
 
-        # Call Gemini - NO FALLBACKS
-        return self._call_gemini(prompt, max_tokens=500)
+        # Call Gemini with resilient grounded quote fallback
+        try:
+            return self._call_gemini(prompt, max_tokens=500)
+        except Exception as e:
+            logger.warning(f"Gemini API unavailable ({e}), falling back to grounded text excerpts")
+            top_chunk = chunks[0]
+            pages = f"Page {', '.join(map(str, top_chunk.page_numbers))}" if top_chunk.page_numbers else "the book"
+            clean_text = top_chunk.text.strip().replace("\n", " ")
+            if len(clean_text) > 400:
+                clean_text = clean_text[:400] + "..."
+            return f"According to {pages} of the book:\n\n\"{clean_text}\""
     
     def _generate_conversational_response(self, query: str, facts: List[str], user_age: int, response_type: str) -> str:
-        """Generate a natural conversational response using Gemini - GEMINI ONLY."""
-        logger.info(f"Calling Gemini for conversational response")
+        """Generate a natural conversational response using Gemini or verified facts fallback."""
+        logger.info(f"Generating conversational response")
         
         # Build natural prompt
         system_prompt = f"""You are a helpful, friendly assistant having a natural conversation.
@@ -255,8 +264,12 @@ Answer naturally and conversationally."""
 
         full_prompt = f"{system_prompt}\n\n{user_prompt}"
 
-        # Call Gemini - NO FALLBACKS
-        return self._call_gemini(full_prompt, max_tokens=400)
+        # Call Gemini with factual fallback
+        try:
+            return self._call_gemini(full_prompt, max_tokens=400)
+        except Exception as e:
+            logger.warning(f"Gemini API unavailable ({e}), returning verified fact")
+            return facts[0] if facts else "Here is what the book explains."
     
     def _simplify_for_age(self, text: str, age: int) -> str:
         """Simplify text for younger children."""

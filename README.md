@@ -15,6 +15,7 @@ An enterprise-grade, pedagogically bounded AI tutoring chatbot platform engineer
 ## 📑 Table of Contents
 
 - [Vision & Problem Statement](#-vision--problem-statement)
+- [UI Showcase & Interface Preview](#-ui-showcase--interface-preview)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Core Processing Pipeline](#-core-processing-pipeline)
@@ -41,6 +42,14 @@ BookBounded introduces a **Strict Boundary Verification Framework**:
 - 🎯 **Verifiable Citations**: Every response references the exact chunk IDs and page numbers where the concept originates.
 - 🧒 **Age-Adaptive Pedagogy**: Explanations adapt automatically to the cognitive level of learners aged 4–15 without losing factual rigor.
 - 🌐 **Multilingual Competency**: Full bilingual text extraction, vectorization, and pedagogical explanation in both **English** and **Urdu**.
+
+---
+
+## 📸 UI Showcase & Interface Preview
+
+![BookBounded Tutoring Chatbot UI](screenshot/main.png)
+
+> **CraterCode Cyber-Minimalist Workspace**: High-performance educational tutoring dashboard featuring live book telemetry (*Building the Intentional University* — 457 pages & 1,841 indexed chunks), drag-and-drop PDF ingestion, 3-tier age adaptation (Explorer 4–7, Scholar 8–11, Master 12–15), bilingual English/Urdu support, and a real-time Grounding Inspector guaranteeing 0.0% hallucination risk with verifiable chunk and page citations.
 
 ---
 
